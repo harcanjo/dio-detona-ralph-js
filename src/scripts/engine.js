@@ -39,6 +39,12 @@ function randomSquare() {
   state.values.hitPosition = randomSquare.id;
 }
 
+function playSound(soundName) {
+  let audio = new Audio(`./src/audios/${soundName}.m4a`);
+  audio.volume = 0.2;
+  audio.play();
+}
+
 function addListenerHitBox() {
   state.view.squares.forEach((square) => {
     square.addEventListener("mousedown", () => {
@@ -46,6 +52,7 @@ function addListenerHitBox() {
         state.values.result++;
         state.view.score.textContent = state.values.result;
         state.values.hitPosition = null;
+        playSound("hit");
       }
     })
   });
