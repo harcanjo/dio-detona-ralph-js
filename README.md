@@ -6,4 +6,4 @@
 
 ## Detalhes 
 - Tecnologias: HTML, CSS e JavaScript
-- Link para jogar: [Detona Ralph](http://github.com)
+- Link para jogar: [Detona Ralph](https://harcanjo.github.io/dio-detona-ralph-js/)
