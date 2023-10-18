@@ -22,6 +22,8 @@ function countDown() {
   state.view.timeLeft.textContent = state.values.currentTime;
 
   if (state.values.currentTime <= 0) {
+    clearInterval(state.actions.countDownTimerId);
+    clearInterval(state.actions.timerId);
     alert("Game Over! O seu resultado foi: " + state.values.result);
   }
 }
