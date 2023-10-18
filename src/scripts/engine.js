@@ -10,8 +10,21 @@ const state = {
     gameVelocity: 1000,
     hitPosition: 0,
     result: 0,
+    currentTime: 60,
   },
+  actions: {
+    countDownTimerId: setInterval(countDown, 1000),
+  }
 };
+
+function countDown() {
+  state.values.currentTime--;
+  state.view.timeLeft.textContent = state.values.currentTime;
+
+  if (state.values.currentTime <= 0) {
+    alert("Game Over! O seu resultado foi: " + state.values.result);
+  }
+}
 
 function randomSquare() {
   state.view.squares.forEach((square) => {
